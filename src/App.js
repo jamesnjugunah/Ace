@@ -1,29 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import Footer from './Footer';
-import Home from './Home';
+import Hero from './Hero';
 import About from './About';
 import Services from './Services';
+import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="container">
-          <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/services" component={Services} />
-            <Route path="/contact" component={Contact} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
+
 export default App;

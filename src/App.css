@@ -1,124 +1,352 @@
-/* General Styles */
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: rgb(70, 66, 66);
+  transition: all 0.5s ease-in-out;
 }
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.head{
+  background-color:black;
+  color: white;  
+  height:100%;
 }
-
-nav ul {
-  list-style-type: none;
+header .logo {
+  position:absolute;
+}
+header .logo span {
+  margin-left: 10px;
+  color:red;
+  font-family: 'Pacifico', cursive;
+  font-size: large;
+  position: relative;
+  top: -15px;
+  left: 8px;
+}
+header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+}
+header nav {
+  position:absolute;
+  top:15px;
+  right:10px;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #333;
+  display:flex;
 }
-
-nav ul li {
-  margin: 10px;
-}
-
-nav ul li a {
+header nav ul li {
+  padding: 20px;
   text-decoration: none;
+
+}
+header nav ul li a {
   color: white;
-  padding: 10px 20px;
-  display: block;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: #ff6600;
+  transform:translateX(10px);
 }
 
-nav ul li a:hover {
-  background-color: #575757;
-}
-
-footer {
-  background-color: #f1f1f1;
+header, section, footer {
   padding: 20px;
   text-align: center;
 }
 
-footer div {
-  margin-top: 10px;
-}
-
-footer a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #333;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form label {
-  margin: 10px 0;
-}
-
-form input, form textarea, form select, form button {
-  padding: 10px;
-  margin: 5px 0;
+.container {
   width: 80%;
-  max-width: 400px;
+  margin: 0 auto;
 }
+/* about section */
 
-form button {
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #575757;
-}
-
-.contact-info {
+#about .container{
+  padding: 20px;
   text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  color:black;
+}
+#about {
+ margin-top: 250px;
+
+}
+#about .container h2 {
+  color: red;
+  text-decoration: underline;
+  font-size: 2em;
+  margin: 0;
+}
+#about .container p {
+  font-size: 1.5em;
+}
+#about .container {
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgb(34, 34, 34);
+
+
+}
+
+/* Hero section */
+#hero {
+  color: black;
+  padding: 100px 0;
+  margin-bottom: 12%;
+}
+#hero {
+  background-size: cover;
+  background-position: center;
+  width:100%;
+  height:100%;
+  
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin: 0;
+  margin-top:6%;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  position:relative;
+  bottom:10%;
+
+}
+
+/* Services section */
+#services .container{
+  background-color: transparent;
+  color:white;
+  border-radius: 10px;
+  width:80%;
+
+}
+
+#services .container h2 {
+  color: red;
+  text-decoration: underline;
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.service-item {
+  display: inline-block;
+  width: 25%;
+  margin: 20px 4.0%;
+  vertical-align: top;
+  background-color: #131111;
+  color:white;
+  border-radius:10px;
+  height:380px;
+  animation: myAnim 1s ease-in-out;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.service-item :hover {
+  transform:translate(5px 0px 5px 0px);
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+.service-item img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+/* Projects section */
+.project-item {
+  display: inline-block;
+  width: 25%;
+  margin: 20px 2.5%;
+  vertical-align: top;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  height: 350px;
+  overflow: hidden;
+}
+#projects .container {
+  background-color:transparent;
+}
+#projects .container h2{
+  color:red;
+  text-decoration: underline;
+
+}
+.project-item h3 {
+  color:red;
+  text-decoration: underline;
+}
+.project-item p {
+  font-size: 1.2em;
+}
+.project-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  transition:all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.project-item img:hover {
+  transform:scale(1.1);
+}
+
+
+/* Contact section */
+#contact .container {
+  background-color:transparent;
+  color:white;
+  border-radius: 10px;
+  width:80%;
+  height:400px;
+}
+#contact .container h2 {
+  color: red;
+  text-decoration: underline;
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.contact-details {
   margin-top: 20px;
 }
+#contact .container p {
+  font-size: 1.2em;
+}
+#contact .container form {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left:35%;
+}
+#contact .container form button {
+  position:relative;
+  left: -34%;
+  width:150px;
+  height:30px;
+  border-radius: 10px;
+  background-color: #ff6600;
+}
+#contact .container form button:hover {
+  background-color: rgb(7, 5, 5);
+  border-radius: 0px;
+  transform:translate(5px 0px 5px 0px);
+  transition:all 0.5s ease-in-out;
+  color:white;
+}
+#contact .container form input {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display:block;
+  margin-bottom: 15px;
+  
+}
+#contact .container form textarea {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: block;
+  margin-bottom: 20px;
+}
 
-.contact-info p {
+.contact-details p {
   margin: 5px 0;
 }
+.contact-details p strong {
+  color:red;
+}
 
+/* Footer */
+.footer-links, .social-links {
+  list-style: none;
+  padding: 0;
+}
+
+#footer .container ul {
+  list-style: none;
+  margin-left: 25%;
+  padding: 0;
+  display:flex;
+}
+#footer .container ul li {
+  padding: 20px;
+  text-decoration: none;
+
+}
+#footer .container ul li a {
+  color: white;
+  text-decoration: none;
+}
+#footer .container ul li a:hover {
+  color: #ff6600;
+  transform:translateX(10px);
+}
+
+.footer-links li, .social-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  form input, form textarea, form select, form button {
+  .service-item, .project-item, .testimonial-item {
     width: 100%;
+    margin: 10px 0;
+  }
+  .container {
+    width: 95%;
   }
 }
-@media (max-width: 1024px) {
-  /* Adjustments for tablets */
-  nav ul {
-    flex-direction: row;
-    justify-content: space-around;
+/*fade -in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  /* Adjustments for small devices */
-  h1 {
-    font-size: 1.5rem;
-  }
+.fade-in-up {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
 
-  p, button {
-    font-size: 1rem;
-  }
+.fade-in-up-delay {
+  animation-delay: 0.5s; /* Optional delay for staggered animations */
 }

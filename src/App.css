@@ -364,7 +364,7 @@ header, section, footer {
 }
 
 /* Media queries */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .service-item, .project-item, .testimonial-item {
     width: 100%;
     margin: 10px 0;
@@ -377,6 +377,10 @@ header, section, footer {
     height: 400px;
     width:400px;
  }
+ #contact .container form input & textarea {
+   width: 100%;
+ }
+ 
 }
 /*fade -in animation */
 @keyframes fadeInUp {

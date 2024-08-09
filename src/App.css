@@ -7,12 +7,16 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .head{
-  background-color:black;
   color: white;  
-  height:100%;
+  height:10%;
+  width:100%;
+ 
 }
 header .logo {
   position:absolute;
+  line-height: 10px;
+  top: 15px;
+  left: 30px;
 }
 header .logo span {
   margin-left: 10px;
@@ -30,8 +34,8 @@ header .logo img {
 }
 header nav {
   position:absolute;
-  top:15px;
-  right:10px;
+  top: 10px;
+  right: 50px;
 }
 header nav ul {
   list-style: none;
@@ -72,7 +76,7 @@ header, section, footer {
   color:black;
 }
 #about {
- margin-top: 250px;
+ margin-top: 80px;
 
 }
 #about .container h2 {
@@ -94,18 +98,38 @@ header, section, footer {
 
 /* Hero section */
 #hero {
-  color: black;
+  color: white;
   padding: 100px 0;
-  margin-bottom: 12%;
+  margin-bottom: 5%;
+  background-color: black;
+  margin-top: 50px;
+  display: flex; /* Add this line */
+  justify-content: center; /* Add this line */
 }
 #hero {
   background-size: cover;
   background-position: center;
-  width:100%;
-  height:100%;
-  
+  width: 100%;
+  height: 400px;
+  background-image: url('images/irrigation2.jpg'), url('images/solar2.jpg'), url('images/cons.jpg');
+  animation: slideshow 30s infinite;
+  display: flex; /* Add this line */
 }
 
+@keyframes slideshow {
+  0% {
+    background-image: url('images/irrigation2.jpg');
+  }
+  33% {
+    background-image: url('images/solar2.jpg');
+  }
+  66% {
+    background-image: url('images/cons.jpg');
+  }
+  100% {
+    background-image: url('images/irrigation2.jpg');
+  }
+}
 .hero-content h1 {
   font-size: 3em;
   margin: 0;
@@ -125,7 +149,15 @@ header, section, footer {
   border-radius: 5px;
   position:relative;
   bottom:10%;
+  box-shadow: 5px 5px 5px black;
 
+}
+.cta-button:hover {
+  background-color: rgb(7, 5, 5);
+  border-radius: 0px;
+  transform:translateY(5px);
+  transition:all 0.5s ease-in-out;
+  color:white;
 }
 
 /* Services section */
@@ -153,6 +185,7 @@ header, section, footer {
   color:white;
   border-radius:10px;
   height:380px;
+  box-shadow: 10px 10px 10px black;
   animation: myAnim 1s ease-in-out;
 }
 
@@ -185,13 +218,14 @@ header, section, footer {
 .project-item {
   display: inline-block;
   width: 25%;
-  margin: 20px 2.5%;
+  margin: 20px 4.0%;
   vertical-align: top;
   background-color: black;
   color: white;
   border-radius: 10px;
   height: 350px;
   overflow: hidden;
+  box-shadow: 10px 10px 10px black;
 }
 #projects .container {
   background-color:transparent;
@@ -262,6 +296,15 @@ header, section, footer {
   transition:all 0.5s ease-in-out;
   color:white;
 }
+#contact .container form input:focus::placeholder {
+  color: transparent;
+  transition:all 0.5s ease;
+
+}
+#contact .container form textarea:focus::placeholder {
+  color: transparent;
+  transition:all 0.5s ease;
+}
 #contact .container form input {
   width: 30%;
   padding: 10px;
@@ -329,6 +372,11 @@ header, section, footer {
   .container {
     width: 95%;
   }
+ .project-item{
+    margin-bottom: 20px;
+    height: 400px;
+    width:400px;
+ }
 }
 /*fade -in animation */
 @keyframes fadeInUp {

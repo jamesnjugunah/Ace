@@ -374,13 +374,15 @@ header, section, footer {
   }
  .project-item{
     margin-bottom: 20px;
-    height: 400px;
-    width:400px;
+    height: 350px;
+    width:300px;
  }
- #contact .container form input & textarea {
-   width: 100%;
+ #contact .container form input{
+   width: 200px;
  }
- 
+ #contact .container form textarea{
+  width: 200px;
+}
 }
 /*fade -in animation */
 @keyframes fadeInUp {

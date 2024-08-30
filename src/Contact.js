@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeInSection from './fadein';
+
 function Contact() {
   return (
     <section id="contact">
@@ -22,5 +23,5 @@ function Contact() {
     </section>
   );
 }
-
 export default Contact;
+
